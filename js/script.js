@@ -176,7 +176,7 @@ function loadMatches() {
                                 <span>${match.time}</span>
                             </div>
                         </div>
-                        <a href="https://api.whatsapp.com/send?phone=256776057501?text=Hello%20DF%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(match.date)}" class="btn btn-whatsapp btn-sm" target="_blank">
+                        <a href="https://wa.me/256776057501?text=Hello%20DF%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(match.date)}" class="btn btn-whatsapp btn-sm" target="_blank">
                             <i class="fab fa-whatsapp"></i> Book Tickets
                         </a>
                     </div>
