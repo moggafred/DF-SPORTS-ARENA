@@ -1,3 +1,5 @@
+const API_URL = 'http://localhost:5000/api';
+
 const flyersData = [
     {
         id: 1,
@@ -121,23 +123,42 @@ const galleryImages = [
     }
 ];
 
-function loadFlyers() {
+async function fetchFromAPI(endpoint, fallback = null) {
+    try {
+        const response = await fetch(`${API_URL}${endpoint}`);
+        if (!response.ok) throw new Error('API unavailable');
+        const data = await response.json();
+        return data.success ? data.data : fallback;
+    } catch (error) {
+        console.log('Using fallback data (API not available)');
+        return fallback;
+    }
+}
+
+async function loadFlyers() {
     const container = document.getElementById('flyers-container');
     if (!container) return;
 
+    const apiData = await fetchFromAPI('/flyers/flyers');
+    const data = apiData || flyersData;
+
     let html = '';
-    flyersData.forEach(flyer => {
+    data.forEach(flyer => {
+        const image = flyer.imageUrl || flyer.image;
+        const title = flyer.title;
+        const date = flyer.formattedDate || flyer.date;
+        const time = flyer.time;
         html += `
             <div class="col-lg-4 col-md-6">
-                <div class="flyer-card" onclick="openImageModal('${flyer.image}', '${flyer.title}')">
+                <div class="flyer-card" onclick="openImageModal('${image}', '${title}')">
                     <div class="overflow-hidden">
-                        <img src="${flyer.image}" alt="${flyer.title}" class="img-fluid">
+                        <img src="${image}" alt="${title}" class="img-fluid">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">${flyer.title}</h5>
+                        <h5 class="card-title">${title}</h5>
                         <div class="flyer-meta">
-                            <span><i class="fas fa-calendar"></i> ${flyer.date}</span>
-                            <span><i class="fas fa-clock"></i> ${flyer.time}</span>
+                            <span><i class="fas fa-calendar"></i> ${date}</span>
+                            <span><i class="fas fa-clock"></i> ${time}</span>
                         </div>
                     </div>
                 </div>
@@ -147,36 +168,44 @@ function loadFlyers() {
     container.innerHTML = html;
 }
 
-function loadMatches() {
+async function loadMatches() {
     const container = document.getElementById('matches-container');
     if (!container) return;
 
+    const apiData = await fetchFromAPI('/matches?upcoming=true');
+    const data = apiData?.matches || matchesData;
+
     let html = '';
-    matchesData.forEach(match => {
+    data.forEach(match => {
+        const teamA = match.teamA;
+        const teamB = match.teamB;
+        const date = match.formattedDate || match.date;
+        const time = match.time;
+        const tournament = match.tournament;
         html += `
             <div class="col-lg-6">
                 <div class="match-card">
                     <div class="card-header">
-                        <h4>${match.tournament}</h4>
+                        <h4>${tournament}</h4>
                     </div>
                     <div class="card-body">
                         <span class="tournament-badge">Upcoming Match</span>
                         <div class="teams-display">
-                            <span class="team-name">${match.teamA}</span>
+                            <span class="team-name">${teamA}</span>
                             <span class="vs-badge">VS</span>
-                            <span class="team-name">${match.teamB}</span>
+                            <span class="team-name">${teamB}</span>
                         </div>
                         <div class="match-info">
                             <div class="match-info-item">
                                 <i class="fas fa-calendar"></i>
-                                <span>${match.date}</span>
+                                <span>${date}</span>
                             </div>
                             <div class="match-info-item">
                                 <i class="fas fa-clock"></i>
-                                <span>${match.time}</span>
+                                <span>${time}</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/256776057501?text=Hello%20DF%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(match.date)}" class="btn btn-whatsapp btn-sm" target="_blank">
+                        <a href="https://wa.me/256776057501?text=Hello%20DF%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(date)}" class="btn btn-whatsapp btn-sm" target="_blank">
                             <i class="fab fa-whatsapp"></i> Book Tickets
                         </a>
                     </div>
@@ -187,16 +216,21 @@ function loadMatches() {
     container.innerHTML = html;
 }
 
-function loadGallery() {
+async function loadGallery() {
     const container = document.getElementById('gallery-container');
     if (!container) return;
 
+    const apiData = await fetchFromAPI('/gallery');
+    const data = apiData?.images || galleryImages;
+
     let html = '';
-    galleryImages.forEach(image => {
+    data.forEach(image => {
+        const src = image.imageUrl || image.src;
+        const alt = image.altText || image.alt;
         html += `
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="gallery-item" onclick="openImageModal('${image.src}', '${image.alt}')">
-                    <img src="${image.src}" alt="${image.alt}" class="img-fluid">
+                <div class="gallery-item" onclick="openImageModal('${src}', '${alt}')">
+                    <img src="${src}" alt="${alt}" class="img-fluid">
                     <div class="overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
