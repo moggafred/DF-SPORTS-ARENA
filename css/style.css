@@ -82,7 +82,7 @@ body {
 }
 
 .hero-section {
-    min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(135deg, rgba(0, 100, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
@@ -637,6 +637,10 @@ body {
     background: #25d366;
 }
 
+.social-link.linkedin:hover {
+    background: #0077b5;
+}
+
 .map-container {
     border-radius: 15px;
     overflow: hidden;
@@ -819,29 +823,226 @@ body {
     }
 }
 
-@media (max-width: 576px) {
-    .hero-section {
-        padding: 20px;
+@media (max-width: 992px) {
+    .page-header {
+        padding: 100px 0 40px;
     }
-    
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .flyer-card img {
+        height: 280px;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .booking-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
     }
     
     .hero-section .tagline {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-hero {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
     }
     
     .section-title {
+        font-size: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .teams-display {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .match-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .booking-section h2 {
+        font-size: 2rem;
+    }
+    
+    .btn-booking {
+        padding: 15px 40px;
+        font-size: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .contact-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 20px;
+        min-height: 90dvh;
+    }
+    
+    .hero-section h1 {
         font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-section .tagline {
+        font-size: 0.95rem;
+        letter-spacing: 0;
+    }
+
+    .hero-section .location {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .page-header {
+        padding: 80px 0 30px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
     }
     
     .flyer-card img {
-        height: 250px;
+        height: 220px;
     }
     
     .gallery-item img {
-        height: 200px;
+        height: 180px;
+    }
+
+    .btn-hero {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .matches-section,
+    .flyers-section,
+    .gallery-section,
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .match-card .card-body {
+        padding: 20px;
+    }
+
+    .team-name {
+        font-size: 1.1rem;
+    }
+
+    .booking-section {
+        padding: 60px 0;
+    }
+
+    .booking-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .booking-section p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .btn-booking {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    .footer-links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-section h1 {
+        font-size: 4.5rem;
+    }
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .match-card .card-body {
+        padding: 40px;
     }
 }
 

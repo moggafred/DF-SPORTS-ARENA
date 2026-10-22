@@ -1,6 +1,6 @@
-# DF Sports Arena Website
+# Natz Sports Arena Website
 
-A complete website for DF Sports Arena - a football arena located in Adjumani, Uganda. This project includes both a static frontend website and a full backend API for managing bookings, matches, and content.
+A complete website for Natz Sports Arena - a football arena located in Adjumani, Uganda. This project includes both a static frontend website and a full backend API for managing bookings, matches, and content.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ A complete website for DF Sports Arena - a football arena located in Adjumani, U
 
 ## Project Overview
 
-DF Sports Arena is a responsive website for managing a football arena, featuring:
+Natz Sports Arena is a responsive website for managing a football arena, featuring:
 - Public website for visitors to view matches, flyers, and gallery
 - Online booking system for pitch reservations
 - Admin dashboard for managing content and bookings
@@ -153,7 +153,7 @@ npm start
 
 ### Default Credentials
 After running `npm run seed`:
-- **Email:** `admin@dfsportsarena.com`
+- **Email:** `admin@natzsportsarena.com`
 - **Password:** `Admin@123`
 
 ### Admin Features
@@ -209,7 +209,7 @@ NODE_ENV=development
 PORT=5000
 
 # MongoDB (Required)
-MONGODB_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/dfsportsarena
+MONGODB_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/natzsportsarena
 
 # JWT (Required)
 JWT_SECRET=your-secret-key
@@ -232,9 +232,9 @@ SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 
 # Arena Contact
-ARENA_PHONE=+256776057501
-ARENA_WHATSAPP=256776057501
-ARENA_EMAIL=info@dfsportsarena.com
+ARENA_PHONE=+256788980631
+ARENA_WHATSAPP=256788980631
+ARENA_EMAIL=info@natzsportsarena.com
 FRONTEND_URL=http://localhost:3000
 ```
 
@@ -248,4 +248,4 @@ Deploy to Railway, Render, Heroku, or any Node.js hosting.
 
 ---
 
-Built with ❤️ for DF Sports Arena, Adjumani, Uganda
+Built with ❤️ for Natz Sports Arena, Adjumani, Uganda

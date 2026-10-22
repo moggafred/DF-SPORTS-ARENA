@@ -1,9 +1,9 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = window.location.origin + '/api';
 
 const flyersData = [
     {
         id: 1,
-        title: "DF Cup Grand Final",
+        title: "Natz Cup Grand Final",
         image: "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         date: "April 15, 2026",
         time: "3:00 PM"
@@ -24,7 +24,7 @@ const flyersData = [
     },
     {
         id: 4,
-        title: "DF Arena vs Rhino FC",
+        title: "Natz Arena vs Rhino FC",
         image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         date: "May 8, 2026",
         time: "3:30 PM"
@@ -48,7 +48,7 @@ const flyersData = [
 const matchesData = [
     {
         id: 1,
-        teamA: "DF Arena FC",
+        teamA: "Natz Arena FC",
         teamB: "Moyo United",
         date: "April 5, 2026",
         time: "3:00 PM",
@@ -56,15 +56,15 @@ const matchesData = [
     },
     {
         id: 2,
-        teamA: "DF Arena FC",
+        teamA: "Natz Arena FC",
         teamB: "Rhino FC",
         date: "April 12, 2026",
         time: "4:00 PM",
-        tournament: "DF Cup 2026"
+        tournament: "Natz Cup 2026"
     },
     {
         id: 3,
-        teamA: "DF Arena FC",
+        teamA: "Natz Arena FC",
         teamB: "Nyapea Stars",
         date: "April 19, 2026",
         time: "3:30 PM",
@@ -72,7 +72,7 @@ const matchesData = [
     },
     {
         id: 4,
-        teamA: "DF Arena FC",
+        teamA: "Natz Arena FC",
         teamB: "Ciforo FC",
         date: "April 26, 2026",
         time: "2:00 PM",
@@ -84,12 +84,12 @@ const galleryImages = [
     {
         id: 1,
         src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        alt: "Football match at DF Arena"
+        alt: "Football match at Natz Arena"
     },
     {
         id: 2,
         src: "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        alt: "DF Cup celebration"
+        alt: "Natz Cup celebration"
     },
     {
         id: 3,
@@ -130,7 +130,6 @@ async function fetchFromAPI(endpoint, fallback = null) {
         const data = await response.json();
         return data.success ? data.data : fallback;
     } catch (error) {
-        console.log('Using fallback data (API not available)');
         return fallback;
     }
 }
@@ -152,7 +151,7 @@ async function loadFlyers() {
             <div class="col-lg-4 col-md-6">
                 <div class="flyer-card" onclick="openImageModal('${image}', '${title}')">
                     <div class="overflow-hidden">
-                        <img src="${image}" alt="${title}" class="img-fluid">
+                        <img src="${image}" alt="${title}" class="img-fluid" loading="lazy">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${title}</h5>
@@ -205,7 +204,7 @@ async function loadMatches() {
                                 <span>${time}</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/256776057501?text=Hello%20DF%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(date)}" class="btn btn-whatsapp btn-sm" target="_blank">
+                        <a href="https://wa.me/256788980631?text=Hello%20Natz%20Sports%20Arena%20I%20would%20like%20to%20book%20the%20pitch%20for%20the%20match%20on%20${encodeURIComponent(date)}" class="btn btn-whatsapp btn-sm" target="_blank">
                             <i class="fab fa-whatsapp"></i> Book Tickets
                         </a>
                     </div>
@@ -230,7 +229,7 @@ async function loadGallery() {
         html += `
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="gallery-item" onclick="openImageModal('${src}', '${alt}')">
-                    <img src="${src}" alt="${alt}" class="img-fluid">
+                    <img src="${src}" alt="${alt}" class="img-fluid" loading="lazy">
                     <div class="overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -260,10 +259,7 @@ function openImageModal(imageSrc, imageAlt) {
 }
 
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function initNavigation() {
@@ -290,7 +286,10 @@ function initBackToTop() {
         }
     });
 
-    backToTop.addEventListener('click', scrollToTop);
+    backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToTop();
+    });
 }
 
 function initScrollAnimations() {
@@ -325,6 +324,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initBackToTop();
     initScrollAnimations();
+
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+        backToTopBtn.removeAttribute('onclick');
+    }
 });
 
 

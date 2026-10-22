@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const settingsSchema = new mongoose.Schema({
     arenaName: {
         type: String,
-        default: 'DF Sports Arena'
+        default: 'Natz Sports Arena'
     },
     tagline: {
         type: String,
@@ -11,15 +11,15 @@ const settingsSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        default: '+256 776 057 501'
+        default: '+256 788 980 631'
     },
     whatsapp: {
         type: String,
-        default: '256776057501'
+        default: '256788980631'
     },
     email: {
         type: String,
-        default: 'info@dfsportsarena.com'
+        default: 'info@natzsportsarena.com'
     },
     address: {
         street: {
@@ -65,17 +65,21 @@ const settingsSchema = new mongoose.Schema({
     socialLinks: {
         facebook: {
             type: String,
-            default: 'https://facebook.com/dfsportsarena'
+            default: 'https://facebook.com/natzsportsarena'
         },
         instagram: {
             type: String,
-            default: 'https://instagram.com/dfsportsarena'
+            default: 'https://instagram.com/natzsportsarena'
         },
         twitter: {
             type: String
         },
         youtube: {
             type: String
+        },
+        linkedin: {
+            type: String,
+            default: 'https://linkedin.com/company/natzsportsarena'
         }
     },
     bookingSettings: {

@@ -1,8 +1,8 @@
-# DF Sports Arena - Frontend Documentation
+# Natz Sports Arena - Frontend Documentation
 
 ## Overview
 
-DF Sports Arena is a static website for a football arena located in Adjumani, Uganda. The frontend is built with HTML5, CSS3, and vanilla JavaScript, using Bootstrap 5 as the UI framework.
+Natz Sports Arena is a static website for a football arena located in Adjumani, Uganda. The frontend is built with HTML5, CSS3, and vanilla JavaScript, using Bootstrap 5 as the UI framework.
 
 ## Project Structure
 
@@ -155,7 +155,7 @@ All functions are called on `DOMContentLoaded` event.
 
 ### WhatsApp Integration
 - Phone: `+256 776 057 501`
-- URL Format: `https://wa.me/256776057501?text=<encoded_message>`
+- URL Format: `https://wa.me/256788980631?text=<encoded_message>`
 - Pre-filled messages for different contexts (booking, tickets, inquiries)
 
 ## External Dependencies

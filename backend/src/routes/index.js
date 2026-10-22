@@ -22,7 +22,7 @@ router.use('/admin', adminRoutes);
 router.get('/health', (req, res) => {
     res.json({
         success: true,
-        message: 'DF Sports Arena API is running',
+        message: 'Natz Sports Arena API is running',
         timestamp: new Date().toISOString()
     });
 });

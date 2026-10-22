@@ -22,7 +22,7 @@ const sendWhatsAppMessage = async (to, message) => {
 
 const sendBookingNotification = async (booking) => {
     const message = `
-*New Booking Request - DF Sports Arena*
+*New Booking Request - Natz Sports Arena*
 
 *Customer:* ${booking.customerName}
 *Phone:* ${booking.customerPhone}
@@ -64,7 +64,7 @@ Your booking has been ${booking.status}.
 
 ${booking.status === 'confirmed' ? 'See you at the arena!' : 'Contact us if you have questions.'}
 
-DF Sports Arena
+Natz Sports Arena
     `.trim();
 
     return sendWhatsAppMessage(

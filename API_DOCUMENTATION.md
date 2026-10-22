@@ -1,4 +1,4 @@
-# DF Sports Arena - API Documentation
+# Natz Sports Arena - API Documentation
 
 ## Base Information
 
@@ -20,7 +20,7 @@ POST /api/auth/login
 **Request:**
 ```json
 {
-    "email": "admin@dfsportsarena.com",
+    "email": "admin@natzsportsarena.com",
     "password": "Admin@123"
 }
 ```
@@ -34,7 +34,7 @@ POST /api/auth/login
         "user": {
             "_id": "64a1b2c3d4e5f6789012345",
             "name": "Admin User",
-            "email": "admin@dfsportsarena.com",
+            "email": "admin@natzsportsarena.com",
             "role": "admin",
             "isActive": true
         },
@@ -96,7 +96,7 @@ Authorization: Bearer <token>
         "user": {
             "_id": "...",
             "name": "Admin User",
-            "email": "admin@dfsportsarena.com",
+            "email": "admin@natzsportsarena.com",
             "role": "admin"
         }
     }
@@ -209,7 +209,7 @@ GET /api/bookings/public
                 "close": "22:00"
             },
             "advanceBookingDays": 30,
-            "whatsapp": "256776057501",
+            "whatsapp": "256788980631",
             "phone": "+256 776 057 501"
         }
     }
@@ -381,7 +381,7 @@ Authorization: Bearer <token>
     "date": "2026-05-01",
     "time": "4:00 PM",
     "tournament": "Friendly Match",
-    "venue": "DF Sports Arena",
+    "venue": "Natz Sports Arena",
     "isHomeMatch": true
 }
 ```
@@ -600,11 +600,11 @@ GET /api/settings/public
     "success": true,
     "data": {
         "settings": {
-            "arenaName": "DF Sports Arena",
+            "arenaName": "Natz Sports Arena",
             "tagline": "Home of Football in Adjumani, Uganda",
             "phone": "+256 776 057 501",
-            "whatsapp": "256776057501",
-            "email": "info@dfsportsarena.com",
+            "whatsapp": "256788980631",
+            "email": "info@natzsportsarena.com",
             "address": {
                 "street": "Adjumani Town",
                 "district": "Adjumani District",
@@ -616,8 +616,8 @@ GET /api/settings/public
                 "days": ["Monday", "Tuesday", ...]
             },
             "socialLinks": {
-                "facebook": "https://facebook.com/dfsportsarena",
-                "instagram": "https://instagram.com/dfsportsarena"
+                "facebook": "https://facebook.com/natzsportsarena",
+                "instagram": "https://instagram.com/natzsportsarena"
             }
         }
     }
@@ -645,11 +645,11 @@ Authorization: Bearer <token>
 **Request:**
 ```json
 {
-    "arenaName": "DF Sports Arena",
+    "arenaName": "Natz Sports Arena",
     "tagline": "New Tagline",
     "phone": "+256 776 999 999",
     "whatsapp": "256776999999",
-    "email": "newemail@dfsportsarena.com",
+    "email": "newemail@natzsportsarena.com",
     "address": {
         "street": "New Street",
         "district": "New District",
@@ -749,7 +749,7 @@ Authorization: Bearer <token>
 ```bash
 curl -X POST http://localhost:5000/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"admin@dfsportsarena.com","password":"Admin@123"}'
+  -d '{"email":"admin@natzsportsarena.com","password":"Admin@123"}'
 ```
 
 ### Get Matches

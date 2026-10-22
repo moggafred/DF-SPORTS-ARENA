@@ -29,7 +29,7 @@ const flyerSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        default: 'DF Sports Arena, Adjumani'
+        default: 'Natz Sports Arena, Adjumani'
     },
     isActive: {
         type: Boolean,

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - DF Sports Arena Admin</title>
+    <title>Settings - Natz Sports Arena Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -19,7 +19,7 @@
 <body>
     <nav class="sidebar">
         <div class="p-4 text-center border-bottom border-secondary">
-            <h4 class="text-white mb-0"><i class="fas fa-futbol me-2"></i>DF Sports</h4>
+            <h4 class="text-white mb-0"><i class="fas fa-futbol me-2"></i>Natz Sports</h4>
             <small class="text-white-50">Admin Panel</small>
         </div>
         <ul class="nav flex-column mt-3">
@@ -140,6 +140,10 @@
                                     <label class="form-label">Twitter</label>
                                     <input type="url" class="form-control" name="twitter" id="twitter">
                                 </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="url" class="form-control" name="linkedin" id="linkedin">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -174,6 +178,7 @@
             document.getElementById('facebook').value = settings.socialLinks?.facebook || '';
             document.getElementById('instagram').value = settings.socialLinks?.instagram || '';
             document.getElementById('twitter').value = settings.socialLinks?.twitter || '';
+            document.getElementById('linkedin').value = settings.socialLinks?.linkedin || '';
         }
 
         document.getElementById('settingsForm').addEventListener('submit', async (e) => {
@@ -198,7 +203,8 @@
                 socialLinks: {
                     facebook: formData.get('facebook'),
                     instagram: formData.get('instagram'),
-                    twitter: formData.get('twitter')
+                    twitter: formData.get('twitter'),
+                    linkedin: formData.get('linkedin')
                 }
             };
 

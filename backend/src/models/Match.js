@@ -26,7 +26,7 @@ const matchSchema = new mongoose.Schema({
     },
     venue: {
         type: String,
-        default: 'DF Sports Arena'
+        default: 'Natz Sports Arena'
     },
     status: {
         type: String,

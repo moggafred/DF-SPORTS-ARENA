@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## DF Sports Arena - Complete Setup
+## Natz Sports Arena - Complete Setup
 
 Follow these steps to get your project running locally.
 
@@ -52,7 +52,7 @@ npx serve .
 
 1. Go to `backend/admin/login.html`
 2. Login with:
-   - Email: `admin@dfsportsarena.com`
+   - Email: `admin@natzsportsarena.com`
    - Password: `Admin@123`
 
 ## Optional: Enable WhatsApp Notifications
@@ -100,11 +100,11 @@ CLOUDINARY_API_SECRET=your-secret
 ## Default Admin Login
 
 ```
-Email: admin@dfsportsarena.com
+Email: admin@natzsportsarena.com
 Password: Admin@123
 ```
 
 ## Need Help?
 
 - Check the full README.md for detailed documentation
-- Contact: info@dfsportsarena.com
+- Contact: info@natzsportsarena.com

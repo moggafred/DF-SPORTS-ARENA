@@ -27,10 +27,10 @@ const seedData = async () => {
 
         const adminUser = await User.create({
             name: 'Admin User',
-            email: 'admin@dfsportsarena.com',
+            email: 'admin@natzsportsarena.com',
             password: 'Admin@123',
             role: 'admin',
-            phone: '+256 776 057 501'
+            phone: '+256 788 980 631'
         });
         console.log('Admin user created:', adminUser.email);
 
@@ -80,7 +80,7 @@ const seedData = async () => {
                 date: new Date('2026-04-05'),
                 time: '3:00 PM',
                 tournament: 'Adjumani District League',
-                venue: 'DF Sports Arena',
+                venue: 'Natz Sports Arena',
                 status: 'upcoming',
                 isHomeMatch: true
             },
@@ -90,7 +90,7 @@ const seedData = async () => {
                 date: new Date('2026-04-12'),
                 time: '4:00 PM',
                 tournament: 'DF Cup 2026',
-                venue: 'DF Sports Arena',
+                venue: 'Natz Sports Arena',
                 status: 'upcoming',
                 isHomeMatch: true
             },
@@ -100,7 +100,7 @@ const seedData = async () => {
                 date: new Date('2026-04-19'),
                 time: '3:30 PM',
                 tournament: 'Inter-Community Cup',
-                venue: 'DF Sports Arena',
+                venue: 'Natz Sports Arena',
                 status: 'upcoming',
                 isHomeMatch: true
             },
@@ -110,7 +110,7 @@ const seedData = async () => {
                 date: new Date('2026-04-26'),
                 time: '2:00 PM',
                 tournament: 'Adjumani District League',
-                venue: 'DF Sports Arena',
+                venue: 'Natz Sports Arena',
                 status: 'upcoming',
                 isHomeMatch: true
             }
@@ -124,7 +124,7 @@ const seedData = async () => {
                 date: new Date('2026-04-15'),
                 time: '3:00 PM',
                 description: 'The biggest football event of the year! Watch the best teams compete for glory.',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 isFeatured: true,
                 createdBy: adminUser._id
@@ -135,7 +135,7 @@ const seedData = async () => {
                 date: new Date('2026-04-22'),
                 time: '4:00 PM',
                 description: 'Communities compete for the championship trophy',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 createdBy: adminUser._id
             },
@@ -145,7 +145,7 @@ const seedData = async () => {
                 date: new Date('2026-05-01'),
                 time: '2:00 PM',
                 description: 'Opening ceremony for the new youth football league season',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 createdBy: adminUser._id
             },
@@ -155,7 +155,7 @@ const seedData = async () => {
                 date: new Date('2026-05-08'),
                 time: '3:30 PM',
                 description: 'Epic showdown between two football giants',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 createdBy: adminUser._id
             },
@@ -165,7 +165,7 @@ const seedData = async () => {
                 date: new Date('2026-05-15'),
                 time: '2:00 PM',
                 description: 'Football for a cause - all proceeds support local communities',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 createdBy: adminUser._id
             },
@@ -175,7 +175,7 @@ const seedData = async () => {
                 date: new Date('2026-05-22'),
                 time: '4:00 PM',
                 description: 'Semi-final matches in the DF Cup tournament',
-                location: 'DF Sports Arena, Adjumani',
+                location: 'Natz Sports Arena, Adjumani',
                 isActive: true,
                 createdBy: adminUser._id
             }
@@ -245,11 +245,11 @@ const seedData = async () => {
         console.log('Gallery images created');
 
         await Settings.create({
-            arenaName: 'DF Sports Arena',
+            arenaName: 'Natz Sports Arena',
             tagline: 'Home of Football in Adjumani, Uganda',
-            phone: '+256 776 057 501',
-            whatsapp: '256776057501',
-            email: 'info@dfsportsarena.com',
+            phone: '+256 788 980 631',
+            whatsapp: '256788980631',
+            email: 'info@natzsportsarena.com',
             address: {
                 street: 'Adjumani Town',
                 district: 'Adjumani District',
@@ -266,8 +266,9 @@ const seedData = async () => {
                 days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
             },
             socialLinks: {
-                facebook: 'https://facebook.com/dfsportsarena',
-                instagram: 'https://instagram.com/dfsportsarena'
+                facebook: 'https://facebook.com/natzsportsarena',
+                instagram: 'https://instagram.com/natzsportsarena',
+                linkedin: 'https://linkedin.com/company/natzsportsarena'
             },
             bookingSettings: {
                 advanceBookingDays: 30,
@@ -286,7 +287,7 @@ const seedData = async () => {
         console.log('Database seeded successfully!');
         console.log('========================================');
         console.log('\nAdmin Login Credentials:');
-        console.log('Email: admin@dfsportsarena.com');
+        console.log('Email: admin@natzsportsarena.com');
         console.log('Password: Admin@123');
         console.log('========================================\n');
 

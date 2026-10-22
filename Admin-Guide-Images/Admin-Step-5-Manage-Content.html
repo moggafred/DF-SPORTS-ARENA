@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Step 5 - Manage Content</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: #fff;
+        }
+        .card {
+            background: linear-gradient(145deg, #0f3460, #16213e);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border: 3px solid #28a745;
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #28a745;
+        }
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            color: #28a745;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .content-card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        .content-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .content-card h3 {
+            color: #28a745;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .content-card p {
+            color: #ccc;
+            font-size: 0.85em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        .footer p {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="badge">ADMIN STEP 5</div>
+            <h1>Manage Content</h1>
+        </div>
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="content-icon">🏆</div>
+                <h3>Matches</h3>
+                <p>Add, edit, delete matches</p>
+            </div>
+            <div class="content-card">
+                <div class="content-icon">📰</div>
+                <h3>Flyers</h3>
+                <p>Upload event flyers</p>
+            </div>
+            <div class="content-card">
+                <div class="content-icon">🖼️</div>
+                <h3>Gallery</h3>
+                <p>Manage photo gallery</p>
+            </div>
+            <div class="content-card">
+                <div class="content-icon">💰</div>
+                <h3>Pricing</h3>
+                <p>Configure packages</p>
+            </div>
+            <div class="content-card">
+                <div class="content-icon">⚙️</div>
+                <h3>Settings</h3>
+                <p>Update arena info</p>
+            </div>
+            <div class="content-card">
+                <div class="content-icon">🔐</div>
+                <h3>Security</h3>
+                <p>Change password</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Natz Sports Arena - Admin Panel</p>
+        </div>
+    </div>
+</body>
+</html>

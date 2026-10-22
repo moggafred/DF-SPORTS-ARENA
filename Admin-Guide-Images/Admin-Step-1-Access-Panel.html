@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Step 1 - Access Panel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: #fff;
+        }
+        .card {
+            background: linear-gradient(145deg, #0f3460, #16213e);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border: 3px solid #e94560;
+            max-width: 700px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e94560;
+        }
+        .badge {
+            display: inline-block;
+            background: #e94560;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .badge.admin {
+            background: #6f42c1;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .content {
+            text-align: center;
+        }
+        .icon {
+            font-size: 5em;
+            margin-bottom: 30px;
+        }
+        .content h2 {
+            font-size: 1.6em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .url-box {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1.1em;
+            color: #4ecdc4;
+            word-break: break-all;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(233, 69, 96, 0.3);
+        }
+        .footer p {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="badge admin">ADMIN STEP 1</div>
+            <h1>Access Admin Panel</h1>
+        </div>
+        <div class="content">
+            <div class="icon">🔐</div>
+            <h2>Open Admin Login Page</h2>
+            <div class="url-box">
+                http://localhost:5000/backend/admin/login.html
+            </div>
+            <p>Make sure the backend server is running first!</p>
+        </div>
+        <div class="footer">
+            <p>Natz Sports Arena - Admin Panel</p>
+        </div>
+    </div>
+</body>
+</html>

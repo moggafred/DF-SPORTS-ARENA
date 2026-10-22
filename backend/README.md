@@ -1,6 +1,6 @@
-# DF Sports Arena Backend
+# Natz Sports Arena Backend
 
-Complete backend API for DF Sports Arena website built with Node.js, Express, and MongoDB.
+Complete backend API for Natz Sports Arena website built with Node.js, Express, and MongoDB.
 
 ## Features
 
@@ -62,9 +62,9 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
-ARENA_PHONE=+256776057501
-ARENA_WHATSAPP=256776057501
-ARENA_EMAIL=info@dfsportsarena.com
+ARENA_PHONE=+256788980631
+ARENA_WHATSAPP=256788980631
+ARENA_EMAIL=info@natzsportsarena.com
 FRONTEND_URL=http://localhost:3000
 ```
 
@@ -134,7 +134,7 @@ npm run seed
 Access the admin panel at: `backend/admin/`
 
 Default credentials after seeding:
-- **Email:** admin@dfsportsarena.com
+- **Email:** admin@natzsportsarena.com
 - **Password:** Admin@123
 
 ## Project Structure

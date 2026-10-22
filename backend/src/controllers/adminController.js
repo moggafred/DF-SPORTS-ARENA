@@ -1,3 +1,4 @@
+const catchAsync = require('../utils/catchAsync');
 const User = require('../models/User');
 const Booking = require('../models/Booking');
 const Match = require('../models/Match');
@@ -5,8 +6,7 @@ const Flyer = require('../models/Flyer');
 const Gallery = require('../models/Gallery');
 const Pricing = require('../models/Pricing');
 
-exports.getDashboardStats = async (req, res, next) => {
-    try {
+exports.getDashboardStats = catchAsync(async (req, res, next) => {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
@@ -113,13 +113,9 @@ exports.getDashboardStats = async (req, res, next) => {
                 bookingTypeStats
             }
         });
-    } catch (error) {
-        next(error);
-    }
-};
+});
 
-exports.getRecentActivity = async (req, res, next) => {
-    try {
+exports.getRecentActivity = catchAsync(async (req, res, next) => {
         const limit = parseInt(req.query.limit) || 10;
 
         const [recentBookings, recentMatches] = await Promise.all([
@@ -140,13 +136,9 @@ exports.getRecentActivity = async (req, res, next) => {
                 recentMatches
             }
         });
-    } catch (error) {
-        next(error);
-    }
-};
+});
 
-exports.getAllUsers = async (req, res, next) => {
-    try {
+exports.getAllUsers = catchAsync(async (req, res, next) => {
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
         const skip = (page - 1) * limit;
@@ -171,13 +163,9 @@ exports.getAllUsers = async (req, res, next) => {
                 }
             }
         });
-    } catch (error) {
-        next(error);
-    }
-};
+});
 
-exports.updateUser = async (req, res, next) => {
-    try {
+exports.updateUser = catchAsync(async (req, res, next) => {
         const { isActive, role } = req.body;
 
         const user = await User.findByIdAndUpdate(
@@ -198,7 +186,4 @@ exports.updateUser = async (req, res, next) => {
             message: 'User updated successfully',
             data: { user }
         });
-    } catch (error) {
-        next(error);
-    }
-};
+});

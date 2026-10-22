@@ -1,4 +1,4 @@
-# DF Sports Arena - Complete Documentation
+# Natz Sports Arena - Complete Documentation
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
 
 ## Project Overview
 
-**DF Sports Arena** is a complete web application for managing a football arena in Adjumani, Uganda. It consists of:
+**Natz Sports Arena** is a complete web application for managing a football arena in Adjumani, Uganda. It consists of:
 
 - **Frontend**: Responsive static website (HTML/CSS/JS)
 - **Backend**: RESTful API (Node.js/Express)
@@ -365,7 +365,7 @@ const connectDB = async () => {
     date: Date,              // Required
     time: String,            // Required
     tournament: String,      // Required
-    venue: String,          // Default: 'DF Sports Arena'
+    venue: String,          // Default: 'Natz Sports Arena'
     status: String,         // 'upcoming' | 'live' | 'completed' | 'cancelled'
     scoreA: Number,
     scoreB: Number,
@@ -387,7 +387,7 @@ const connectDB = async () => {
     date: Date,              // Required
     time: String,            // Required
     description: String,    // Max 500 chars
-    location: String,        // Default: 'DF Sports Arena, Adjumani'
+    location: String,        // Default: 'Natz Sports Arena, Adjumani'
     isActive: Boolean,       // Default: true
     isFeatured: Boolean,    // Default: false
     createdBy: ObjectId,    // Ref: User
@@ -432,7 +432,7 @@ const connectDB = async () => {
 #### 7. Settings Model
 ```javascript
 {
-    arenaName: String,       // Default: 'DF Sports Arena'
+    arenaName: String,       // Default: 'Natz Sports Arena'
     tagline: String,
     phone: String,
     whatsapp: String,
@@ -519,7 +519,7 @@ Response:
 ```json
 {
     "success": true,
-    "message": "DF Sports Arena API is running",
+    "message": "Natz Sports Arena API is running",
     "timestamp": "2026-04-01T12:00:00.000Z"
 }
 ```
@@ -622,7 +622,7 @@ POST /api/auth/login
 Content-Type: application/json
 
 {
-    "email": "admin@dfsportsarena.com",
+    "email": "admin@natzsportsarena.com",
     "password": "Admin@123"
 }
 ```
@@ -718,7 +718,7 @@ URL: `backend/admin/login.html`
 
 ### Login Credentials
 ```
-Email: admin@dfsportsarena.com
+Email: admin@natzsportsarena.com
 Password: Admin@123
 ```
 
@@ -797,7 +797,7 @@ Edit `.env`:
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/dfsportsarena
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/natzsportsarena
 JWT_SECRET=your-super-secret-key-change-this
 JWT_EXPIRES_IN=7d
 ```
@@ -931,7 +931,7 @@ The frontend works without backend - it uses static data as fallback.
 ## Support
 
 For questions or issues:
-- Email: info@dfsportsarena.com
+- Email: info@natzsportsarena.com
 - Phone: +256 776 057 501
 - WhatsApp: +256 776 057 501
 

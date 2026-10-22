@@ -6,7 +6,7 @@ exports.getSettings = async (req, res, next) => {
 
         if (!settings) {
             settings = await Settings.create({
-                arenaName: 'DF Sports Arena'
+                arenaName: 'Natz Sports Arena'
             });
         }
 
@@ -60,10 +60,10 @@ exports.getPublicSettings = async (req, res, next) => {
                 success: true,
                 data: {
                     settings: {
-                        arenaName: 'DF Sports Arena',
-                        phone: '+256 776 057 501',
-                        whatsapp: '256776057501',
-                        email: 'info@dfsportsarena.com',
+                        arenaName: 'Natz Sports Arena',
+                        phone: '+256 788 980 631',
+                        whatsapp: '256788980631',
+                        email: 'info@natzsportsarena.com',
                         address: {
                             street: 'Adjumani Town',
                             district: 'Adjumani District',

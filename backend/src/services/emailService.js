@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async (options) => {
     try {
         const mailOptions = {
-            from: `"DF Sports Arena" <${process.env.SMTP_USER}>`,
+            from: `"Natz Sports Arena" <${process.env.SMTP_USER}>`,
             to: options.to,
             subject: options.subject,
             html: options.html,
@@ -46,7 +46,7 @@ const sendBookingConfirmation = async (booking) => {
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>DF Sports Arena</h1>
+                    <h1>Natz Sports Arena</h1>
                     <p>Booking Confirmation</p>
                 </div>
                 <div class="content">
@@ -71,7 +71,7 @@ const sendBookingConfirmation = async (booking) => {
                     </ul>
                 </div>
                 <div class="footer">
-                    <p>&copy; ${new Date().getFullYear()} DF Sports Arena. All rights reserved.</p>
+                    <p>&copy; ${new Date().getFullYear()} Natz Sports Arena. All rights reserved.</p>
                 </div>
             </div>
         </body>
@@ -80,7 +80,7 @@ const sendBookingConfirmation = async (booking) => {
 
     return sendEmail({
         to: booking.customerEmail || process.env.ARENA_EMAIL,
-        subject: `Booking Confirmation - DF Sports Arena`,
+        subject: `Booking Confirmation - Natz Sports Arena`,
         html
     });
 };
@@ -109,7 +109,7 @@ const sendBookingStatusUpdate = async (booking) => {
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>DF Sports Arena</h1>
+                    <h1>Natz Sports Arena</h1>
                     <p>Booking Update</p>
                 </div>
                 <div class="content">
@@ -128,7 +128,7 @@ const sendBookingStatusUpdate = async (booking) => {
 
     return sendEmail({
         to: booking.customerEmail || process.env.ARENA_EMAIL,
-        subject: `Booking ${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)} - DF Sports Arena`,
+        subject: `Booking ${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)} - Natz Sports Arena`,
         html
     });
 };
